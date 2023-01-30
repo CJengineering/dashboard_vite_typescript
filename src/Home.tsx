@@ -84,9 +84,24 @@ return (
 
    <p></p>
    <div> Engagement/impresions --{data ? <>
-    {data.map(({ end_time, value }) => (
-      <p key={end_time}> Date  <span className='text-color-green '>{end_time.substring(0, end_time.length - 14)}</span> ---- Community Jameel {selectedValue}:  <span className='text-color-blue'>{value}</span> </p>
-    ))}
+    
+      <table>
+      <thead>
+        <tr>
+          <th>Date </th>
+          <th>{selectedValue}</th>
+        </tr>
+      </thead>
+      <tbody>
+      {data.map(({ end_time, value }) => (
+        <tr key={end_time}>
+        <td>{end_time.substring(0, end_time.length - 14)}</td>
+        <td>{value}</td>
+        </tr>
+            ))}
+      </tbody>
+    </table>
+
   </>: <h2>tokken expired </h2> }</div>
 
     <ul>
