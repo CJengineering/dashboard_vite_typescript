@@ -12,7 +12,7 @@ const InstaPost: React.FC<Props> = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:3000/insta_posts?date_start=${startDate}&date_end=${endDate}&commit=Save+`);
+      const response = await fetch(`https://social-ie57e5kgia-od.a.run.app/insta_posts?date_start=${startDate}&date_end=${endDate}&commit=Save+`);
       const data = await response.json();
       setData(data);
       console.log('this is the data',data)
