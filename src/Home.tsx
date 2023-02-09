@@ -81,7 +81,7 @@ return (
        <section>
         <p>In order to retrieve data per post choose a date from 12-2014 to 12-2022</p>
         <div>
-          <InstaPost/>
+          <InstaPost />
         </div>
        </section>
     <div>

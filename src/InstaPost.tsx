@@ -1,12 +1,23 @@
 import React, { useState } from 'react';
 
-interface Props {}
+interface Data {
+    id: number;
+    like_count: number;
+    comments_count: number;
+    media_url: string;
+    age: number;
+    timestamp: string;
+    media_type:string
+  }
 
-const InstaPost: React.FC<Props> = () => {
+  interface Props {
+    data: Data[];
+  }
+const InstaPost= () => {
   const [startDate, setStartDate] = useState<string | null>(null);
   const [endDate, setEndDate] = useState<string | null>(null);
 
-  const[data, setData]=useState< []| null>(null)
+  const[data, setData]=useState< Data[] >([])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
