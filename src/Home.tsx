@@ -1,10 +1,21 @@
 import React,{useState, useEffect} from 'react'
 import './App.css'
+import InstaPost from './InstaPost';
 
 function Home(){
 
     const [tokken, setTokken] = useState<string>('');
+    const [hello, setHello]= useState<string>('')
 
+    async function fetchRails() {
+      try {
+        const res = await fetch('http://localhost:3000');
+        const data = await res.json();
+        setHello(data.hello);
+      } catch (err) {
+        console.error('this is the:', err);
+      }
+    }
   
   const handleInputChange = (event : React.ChangeEvent<HTMLInputElement>) => {
     setTokken(event.target.value);
@@ -66,20 +77,28 @@ return (
     
    <div>
     <h1>Dashboard for social media </h1>
+       
+       <section>
+        <p>In order to retrieve data per post choose a date from 12-2014 to 12-2022</p>
+        <div>
+          <InstaPost/>
+        </div>
+       </section>
     <div>
+      <h2>This part is for live streaming from Facebook </h2>
+      <h3 className='text-color-red'>Under construnction </h3>
         <input type="password" value={tokken} onChange={handleInputChange} />
         <select value={selectedValue} onChange={handleChange}>
             <option value="impressions">impressions</option>
             <option value="reach">Reach</option>
       </select>
-       
        <div>   
             <input type="date"onChange={handleDateStart}/>
             <input type="date"onChange={handleDateEnd}/>
             <p>Selected Date: {date.start}</p>
             <p>Selected Date: {date.end}</p>    
       </div>
-      <button onClick={triggerLog}>Test on console Log</button>
+      <button onClick={triggerLog} className='btn-test'>Test on console Log</button>
   </div>
 
    <p></p>

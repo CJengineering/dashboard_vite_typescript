@@ -1,12 +1,23 @@
 .conatainer-main_instagram{
-  padding: 50px;
-  margin-left: 5rem;
+ 
+  padding: 20px;
+  
 }
 
 .text-color-green{
   color:green;
 }
-
+.text-color-red{
+  color: red;
+}
 .text-color-blue{
   color: blue;
+}
+.btn-test{
+  background-color: blue;
+  color: aliceblue;
+}
+
+.table-container{
+  width: 100%;
 }
