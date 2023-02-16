@@ -51,9 +51,9 @@ const InstaPost= () => {
         onChange={e => setEndDate(e.target.value)}
       />
       <br />
-      <button type="submit" className='btn-test'>Submit</button>
+      <button type="submit" className='btn-test'>Fetch Data from DB</button>
     </form>
-    <div className='table-container'>
+    <div className='table'>
     <table>
       <thead>
         <tr>
