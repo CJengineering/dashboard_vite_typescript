@@ -8,7 +8,7 @@ function Home(){
     const [tokken, setTokken] = useState<string>('');
     const [hello, setHello]= useState<string>('')
     const short_live_token ='EAAmNvp7ZCK7kBADfZA31HMnCvsF5u7sEZCAevylnwVZBc69inQdXOipFCakRxTfq0DAxZAiimGsqcl1jcSLASVquTwQ5G8HNFmZBZBe3kny3fTMf3CaQr11CcauR5eIHZBWkc8xN1tT0z6ezrWWhpkCW5KimgTwVO041EuxaE3HQSqV4pfclvPFKCZA4VzK1DE2kZD'
-    const long_life_fb_token ='EAAmNvp7ZCK7kBAFm1xECKSxZAkuEVY0N9kJdhii6DfkbrhmFHY52MHxQNFKL1UPbNFQh96RwaZBXUNdWfOj5HTvUuwQVZBUtUllEgZBeJaShC1BZBJ8MBRXm6I0yetVM1p0MrI9N3bcpvXtuZB5hfYVqVgw0oytzsKFQx8Cm2OkxwZDZD'
+    const long_life_fb_token ='EAAmNvp7ZCK7kBAArSmPXWPdClz5COZCZBsQOg78D3z37J3BPsyDble32MCLXoi78fcEYb5bPAR9ZBTT02ntEZBcdIr7kgiEzdmsInZAeA4xRrsfj5U1Va9PiyZAiRDZBqYxshWwzUT2a29lXipsHxJa43td4cl16AaH0wvZAZCVqL7mAZDZD'
     async function fetchRails() {
       try {
         const res = await fetch('http://localhost:3000');
