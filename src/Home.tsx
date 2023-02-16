@@ -7,7 +7,8 @@ function Home(){
 
     const [tokken, setTokken] = useState<string>('');
     const [hello, setHello]= useState<string>('')
-    const long_life_fb_token ='EAAmNvp7ZCK7kBAA5pfhXprHZBhkzEBdX17U9QTSF7TR0AAW8xp28jTuiYZB2COZCHeoPHG8AjI2kbCtRktK6nz67x5mljqDJmhnyJojuOaCnR0zxGVRyDTLbRwZBcPKZCeAA1vnBkVGzabncKi6t0lZA4E6LcG2DUurd5ok5J8L2wZDZD'
+    const short_live_token ='EAAmNvp7ZCK7kBADfZA31HMnCvsF5u7sEZCAevylnwVZBc69inQdXOipFCakRxTfq0DAxZAiimGsqcl1jcSLASVquTwQ5G8HNFmZBZBe3kny3fTMf3CaQr11CcauR5eIHZBWkc8xN1tT0z6ezrWWhpkCW5KimgTwVO041EuxaE3HQSqV4pfclvPFKCZA4VzK1DE2kZD'
+    const long_life_fb_token ='EAAmNvp7ZCK7kBAFm1xECKSxZAkuEVY0N9kJdhii6DfkbrhmFHY52MHxQNFKL1UPbNFQh96RwaZBXUNdWfOj5HTvUuwQVZBUtUllEgZBeJaShC1BZBJ8MBRXm6I0yetVM1p0MrI9N3bcpvXtuZB5hfYVqVgw0oytzsKFQx8Cm2OkxwZDZD'
     async function fetchRails() {
       try {
         const res = await fetch('http://localhost:3000');
@@ -57,6 +58,7 @@ const handleDateEnd = (e : React.ChangeEvent<HTMLInputElement>) => {
   async function fetchData() {
     try {
       const res = await fetch('https://graph.facebook.com/v15.0/17841401901416928/insights?metric='+selectedValue+'&period=week&since='+date.start+'&until='+date.end+'&access_token='+long_life_fb_token);
+      
       const data = await res.json();
       setData(data.data[0].values);
     } catch (err) {
